@@ -8,6 +8,7 @@ import Rating from "@mui/material/Rating";
 import Typography from "@mui/material/Typography";
 import Header from "../Header";
 import Footer from "../Footer";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [value, setValue] = React.useState(2);
@@ -59,7 +60,7 @@ const Home = () => {
           <section className=" body-font">
             <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
               <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                <h1 className="   text-4xl md:text-3xl lg:text-5xl mb-4 font-bold text-[#f9a826]">
+                <h1 className="   text-4xl md:text-3xl lg:text-5xl mb-4 font-extrabold text-orange-400">
                   A Different kind of grocery store
                 </h1>
                 <p className="mb-8 leading-relaxed text-white">
@@ -152,12 +153,14 @@ const Home = () => {
                     Do not miss the current offer untill the end of this month
                   </p>
                 </div>
-                <div className="hover:scale-110 transition cursor-pointer flex items-center">
-                  <div>See All </div>
-                  <div className="bg-[#f9a826] ml-2  p-1 rounded-full ">
-                    <AiOutlineArrowRight />
+                <Link to="/store">
+                  <div className="hover:scale-110 transition cursor-pointer flex items-center">
+                    <div>See All </div>
+                    <div className="bg-[#f9a826] ml-2  p-1 rounded-full ">
+                      <AiOutlineArrowRight />
+                    </div>
                   </div>
-                </div>
+                </Link>
               </div>
               <div className="grid lg:grid-cols-3 md:grid-cols-2 mx-10 md:mx-0 grid-cols-1 place-content-center place-items-center gap-10 ">
                 {fetchData.map((item, index) => {
@@ -213,6 +216,7 @@ const Home = () => {
               <input
                 type="email"
                 className="p-3 my-4 rounded-lg text-black font-bold text-lg"
+                placeholder="Email"
               />
               <button className="text-white bg-[#f9a826] border-0 py-2 px-6 font-bold focus:outline-none hover:bg-orange-300 rounded text-lg shadow-md text-center">
                 Subscribe
