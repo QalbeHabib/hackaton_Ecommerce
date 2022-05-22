@@ -1,8 +1,119 @@
 import React from "react";
+import Images from "../../Assets/Images";
 import Header from "../Header/";
 
 const Store = () => {
-  const storeData = [];
+  const storeData = [
+    {
+      title: "Shose",
+      description: "this is  winther shose to wear only in winter",
+      image: Images.one,
+      price: "$54",
+    },
+    {
+      title: "Shose",
+      description: "this is  winther shose to wear only in winter",
+      image: Images.one,
+      price: "$54",
+    },
+    {
+      title: "Shose",
+      description: "this is  winther shose to wear only in winter",
+      image: Images.one,
+      price: "$54",
+    },
+    {
+      title: "Shose",
+      description: "this is  winther shose to wear only in winter",
+      image: Images.one,
+      price: "$54",
+    },
+    {
+      title: "Shose",
+      description: "this is  winther shose to wear only in winter",
+      image: Images.one,
+      price: "$54",
+    },
+    {
+      title: "Shose",
+      description: "this is  winther shose to wear only in winter",
+      image: Images.one,
+      price: "$54",
+    },
+    {
+      title: "Shose",
+      description: "this is  winther shose to wear only in winter",
+      image: Images.one,
+      price: "$54",
+    },
+    {
+      title: "Shose",
+      description: "this is  winther shose to wear only in winter",
+      image: Images.one,
+      price: "$54",
+    },
+    {
+      title: "Shose",
+      description: "this is  winther shose to wear only in winter",
+      image: Images.one,
+      price: "$54",
+    },
+    {
+      title: "Shose",
+      description: "this is  winther shose to wear only in winter",
+      image: Images.one,
+      price: "$54",
+    },
+    {
+      title: "Shose",
+      description: "this is  winther shose to wear only in winter",
+      image: Images.one,
+      price: "$54",
+    },
+    {
+      title: "Shose",
+      description: "this is  winther shose to wear only in winter",
+      image: Images.one,
+      price: "$54",
+    },
+    {
+      title: "bags",
+      description: "this is  summer bag to handle only in winter",
+      image: Images.six,
+      price: "$25",
+    },
+    {
+      title: "watch",
+      description: "this is  fasion watch to wear only in winter",
+      image: Images.four,
+      price: "$52",
+    },
+    {
+      title: "cloths",
+      description: "this is  winther Cloths to wear only in winter",
+      image: Images.three,
+      price: "$122",
+    },
+    {
+      title: "Laptop",
+      description: "this is  High Ended PC ",
+      image: Images.six,
+      price: "$22",
+    },
+    {
+      title: "mobile",
+      description: "this is  winther shose to wear only in winter",
+      image: Images.five,
+      price: "$52",
+    },
+    {
+      title: "spinner",
+      description: "this is  spinner to rottate for enjoyment",
+      image: Images.two,
+      price: "$6",
+    },
+  ];
+
   return (
     <div>
       <Header />
@@ -48,385 +159,40 @@ const Store = () => {
                 and add it to your cart.
               </p>
             </div>
-            <div className="grid max-w-md text-black gap-10 row-gap-8 lg:max-w-screen-lg sm:row-gap-10 lg:grid-cols-3 xl:max-w-screen-lg sm:mx-auto">
-              <div className="flex shadow-lg flex-col transition duration-300 bg-white rounded-lg  hover:shadow">
-                <div className="relative w-full h-48">
-                  <img
-                    src="https://images.pexels.com/photos/3184305/pexels-photo-3184305.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                    className="object-cover w-full h-full rounded-t"
-                    alt="Plan"
-                  />
-                </div>
-                <div className="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-b">
-                  <div>
-                    <div className="text-lg font-semibold">Basic</div>
-                    <p className="text-sm ">
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem doloremque.
-                    </p>
-                    <div className="mt-1 mb-4 mr-1 text-4xl font-bold sm:text-5xl">
-                      $12
+            <div className="grid  text-black gap-3   md:grid-cols-3  lg:grid-cols-4 max-w-screen-2xl mx-auto">
+              {storeData.map((item, id) => {
+                return (
+                  <div
+                    className="flex shadow-lg flex-col transition duration-300 bg-white rounded-lg  hover:shadow"
+                    key={id}
+                  >
+                    <div className="relative w-full h-48">
+                      <img
+                        src={item.image}
+                        className="object-cover w-full h-full rounded-t"
+                        alt="Plan"
+                      />
+                    </div>
+                    <div className="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-b">
+                      <div>
+                        <div className="text-lg font-semibold">
+                          {item.title}
+                        </div>
+                        <p className="text-sm ">{item.description}</p>
+                        <div className="mt-1 mb-4 mr-1 text-2xl font-bold ">
+                          {item.price}
+                        </div>
+                      </div>
+                      <a
+                        href="/"
+                        className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide bg-[#f9a826] transition duration-200 rounded shadow-md text-black  focus:shadow-outline focus:outline-none hover:scale-105"
+                      >
+                        Add to Cart
+                      </a>
                     </div>
                   </div>
-                  <a
-                    href="/"
-                    className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                  >
-                    Buy Basic
-                  </a>
-                </div>
-              </div>
-              <div className="flex shadow-lg flex-col transition duration-300 bg-white rounded-lg  hover:shadow">
-                <div className="relative w-full h-48">
-                  <img
-                    src="https://images.pexels.com/photos/3184305/pexels-photo-3184305.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                    className="object-cover w-full h-full rounded-t"
-                    alt="Plan"
-                  />
-                </div>
-                <div className="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-b">
-                  <div>
-                    <div className="text-lg font-semibold">Basic</div>
-                    <p className="text-sm ">
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem doloremque.
-                    </p>
-                    <div className="mt-1 mb-4 mr-1 text-4xl font-bold sm:text-5xl">
-                      $12
-                    </div>
-                  </div>
-                  <a
-                    href="/"
-                    className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                  >
-                    Buy Basic
-                  </a>
-                </div>
-              </div>
-              <div className="flex shadow-lg flex-col transition duration-300 bg-white rounded-lg  hover:shadow">
-                <div className="relative w-full h-48">
-                  <img
-                    src="https://images.pexels.com/photos/3184305/pexels-photo-3184305.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                    className="object-cover w-full h-full rounded-t"
-                    alt="Plan"
-                  />
-                </div>
-                <div className="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-b">
-                  <div>
-                    <div className="text-lg font-semibold">Basic</div>
-                    <p className="text-sm ">
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem doloremque.
-                    </p>
-                    <div className="mt-1 mb-4 mr-1 text-4xl font-bold sm:text-5xl">
-                      $12
-                    </div>
-                  </div>
-                  <a
-                    href="/"
-                    className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                  >
-                    Buy Basic
-                  </a>
-                </div>
-              </div>
-              <div className="flex shadow-lg flex-col transition duration-300 bg-white rounded-lg  hover:shadow">
-                <div className="relative w-full h-48">
-                  <img
-                    src="https://images.pexels.com/photos/3184305/pexels-photo-3184305.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                    className="object-cover w-full h-full rounded-t"
-                    alt="Plan"
-                  />
-                </div>
-                <div className="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-b">
-                  <div>
-                    <div className="text-lg font-semibold">Basic</div>
-                    <p className="text-sm ">
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem doloremque.
-                    </p>
-                    <div className="mt-1 mb-4 mr-1 text-4xl font-bold sm:text-5xl">
-                      $12
-                    </div>
-                  </div>
-                  <a
-                    href="/"
-                    className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                  >
-                    Buy Basic
-                  </a>
-                </div>
-              </div>
-              <div className="flex shadow-lg flex-col transition duration-300 bg-white rounded-lg  hover:shadow">
-                <div className="relative w-full h-48">
-                  <img
-                    src="https://images.pexels.com/photos/3184305/pexels-photo-3184305.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                    className="object-cover w-full h-full rounded-t"
-                    alt="Plan"
-                  />
-                </div>
-                <div className="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-b">
-                  <div>
-                    <div className="text-lg font-semibold">Basic</div>
-                    <p className="text-sm ">
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem doloremque.
-                    </p>
-                    <div className="mt-1 mb-4 mr-1 text-4xl font-bold sm:text-5xl">
-                      $12
-                    </div>
-                  </div>
-                  <a
-                    href="/"
-                    className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                  >
-                    Buy Basic
-                  </a>
-                </div>
-              </div>
-              <div className="flex shadow-lg flex-col transition duration-300 bg-white rounded-lg  hover:shadow">
-                <div className="relative w-full h-48">
-                  <img
-                    src="https://images.pexels.com/photos/3184305/pexels-photo-3184305.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                    className="object-cover w-full h-full rounded-t"
-                    alt="Plan"
-                  />
-                </div>
-                <div className="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-b">
-                  <div>
-                    <div className="text-lg font-semibold">Basic</div>
-                    <p className="text-sm ">
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem doloremque.
-                    </p>
-                    <div className="mt-1 mb-4 mr-1 text-4xl font-bold sm:text-5xl">
-                      $12
-                    </div>
-                  </div>
-                  <a
-                    href="/"
-                    className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                  >
-                    Buy Basic
-                  </a>
-                </div>
-              </div>
-              <div className="flex shadow-lg flex-col transition duration-300 bg-white rounded-lg  hover:shadow">
-                <div className="relative w-full h-48">
-                  <img
-                    src="https://images.pexels.com/photos/3184305/pexels-photo-3184305.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                    className="object-cover w-full h-full rounded-t"
-                    alt="Plan"
-                  />
-                </div>
-                <div className="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-b">
-                  <div>
-                    <div className="text-lg font-semibold">Basic</div>
-                    <p className="text-sm ">
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem doloremque.
-                    </p>
-                    <div className="mt-1 mb-4 mr-1 text-4xl font-bold sm:text-5xl">
-                      $12
-                    </div>
-                  </div>
-                  <a
-                    href="/"
-                    className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                  >
-                    Buy Basic
-                  </a>
-                </div>
-              </div>
-              <div className="flex shadow-lg flex-col transition duration-300 bg-white rounded-lg  hover:shadow">
-                <div className="relative w-full h-48">
-                  <img
-                    src="https://images.pexels.com/photos/3184305/pexels-photo-3184305.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                    className="object-cover w-full h-full rounded-t"
-                    alt="Plan"
-                  />
-                </div>
-                <div className="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-b">
-                  <div>
-                    <div className="text-lg font-semibold">Basic</div>
-                    <p className="text-sm ">
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem doloremque.
-                    </p>
-                    <div className="mt-1 mb-4 mr-1 text-4xl font-bold sm:text-5xl">
-                      $12
-                    </div>
-                  </div>
-                  <a
-                    href="/"
-                    className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-black transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                  >
-                    Buy Basic
-                  </a>
-                </div>
-              </div>
-              <div className="flex shadow-lg flex-col transition duration-300 bg-white rounded-lg  hover:shadow">
-                <div className="relative w-full h-48">
-                  <img
-                    src="https://images.pexels.com/photos/3184305/pexels-photo-3184305.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                    className="object-cover w-full h-full rounded-t"
-                    alt="Plan"
-                  />
-                </div>
-                <div className="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-b">
-                  <div>
-                    <div className="text-lg font-semibold">Basic</div>
-                    <p className="text-sm ">
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem doloremque.
-                    </p>
-                    <div className="mt-1 mb-4 mr-1 text-4xl font-bold sm:text-5xl">
-                      $12
-                    </div>
-                  </div>
-                  <a
-                    href="/"
-                    className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                  >
-                    Buy Basic
-                  </a>
-                </div>
-              </div>
-              <div className="flex shadow-lg flex-col transition duration-300 bg-white rounded-lg  hover:shadow">
-                <div className="relative w-full h-48">
-                  <img
-                    src="https://images.pexels.com/photos/3184305/pexels-photo-3184305.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                    className="object-cover w-full h-full rounded-t"
-                    alt="Plan"
-                  />
-                </div>
-                <div className="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-b">
-                  <div>
-                    <div className="text-lg font-semibold">Basic</div>
-                    <p className="text-sm ">
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem doloremque.
-                    </p>
-                    <div className="mt-1 mb-4 mr-1 text-4xl font-bold sm:text-5xl">
-                      $12
-                    </div>
-                  </div>
-                  <a
-                    href="/"
-                    className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                  >
-                    Buy Basic
-                  </a>
-                </div>
-              </div>
-              <div className="flex shadow-lg flex-col transition duration-300 bg-white rounded-lg  hover:shadow">
-                <div className="relative w-full h-48">
-                  <img
-                    src="https://images.pexels.com/photos/3184305/pexels-photo-3184305.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                    className="object-cover w-full h-full rounded-t"
-                    alt="Plan"
-                  />
-                </div>
-                <div className="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-b">
-                  <div>
-                    <div className="text-lg font-semibold">Basic</div>
-                    <p className="text-sm ">
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem doloremque.
-                    </p>
-                    <div className="mt-1 mb-4 mr-1 text-4xl font-bold sm:text-5xl">
-                      $12
-                    </div>
-                  </div>
-                  <a
-                    href="/"
-                    className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                  >
-                    Buy Basic
-                  </a>
-                </div>
-              </div>
-              <div className="flex shadow-lg flex-col transition duration-300 bg-white rounded-lg  hover:shadow">
-                <div className="relative w-full h-48">
-                  <img
-                    src="https://images.pexels.com/photos/3184305/pexels-photo-3184305.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                    className="object-cover w-full h-full rounded-t"
-                    alt="Plan"
-                  />
-                </div>
-                <div className="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-b">
-                  <div>
-                    <div className="text-lg font-semibold">Basic</div>
-                    <p className="text-sm ">
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem doloremque.
-                    </p>
-                    <div className="mt-1 mb-4 mr-1 text-4xl font-bold sm:text-5xl">
-                      $12
-                    </div>
-                  </div>
-                  <a
-                    href="/"
-                    className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                  >
-                    Buy Basic
-                  </a>
-                </div>
-              </div>
-              <div className="flex shadow-lg flex-col transition duration-300 bg-white rounded-lg  hover:shadow">
-                <div className="relative w-full h-48">
-                  <img
-                    src="https://images.pexels.com/photos/3184305/pexels-photo-3184305.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                    className="object-cover w-full h-full rounded-t"
-                    alt="Plan"
-                  />
-                </div>
-                <div className="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-b">
-                  <div>
-                    <div className="text-lg font-semibold">Basic</div>
-                    <p className="text-sm ">
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem doloremque.
-                    </p>
-                    <div className="mt-1 mb-4 mr-1 text-4xl font-bold sm:text-5xl">
-                      $12
-                    </div>
-                  </div>
-                  <a
-                    href="/"
-                    className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                  >
-                    Buy Basic
-                  </a>
-                </div>
-              </div>
-              <div className="flex shadow-lg flex-col transition duration-300 bg-white rounded-lg  hover:shadow">
-                <div className="relative w-full h-48">
-                  <img
-                    src="https://images.pexels.com/photos/3184305/pexels-photo-3184305.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                    className="object-cover w-full h-full rounded-t"
-                    alt="Plan"
-                  />
-                </div>
-                <div className="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-b">
-                  <div>
-                    <div className="text-lg font-semibold">Basic</div>
-                    <p className="text-sm ">
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem doloremque.
-                    </p>
-                    <div className="mt-1 mb-4 mr-1 text-4xl font-bold sm:text-5xl">
-                      $12
-                    </div>
-                  </div>
-                  <a
-                    href="/"
-                    className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                  >
-                    Buy Basic
-                  </a>
-                </div>
-              </div>
+                );
+              })}
             </div>
           </div>
         </div>

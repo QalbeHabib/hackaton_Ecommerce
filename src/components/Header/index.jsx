@@ -53,11 +53,10 @@ const Header = () => {
               </Link>
             </ul>
           </div>
-          <ul className="flex items-center hidden space-x-8 lg:flex">
+          <ul className="flex items-center hidden space-x-8 lg:flex space-y-4 md:space-y-0">
             <Link to="/login">
               <li>
                 <a
-                  href="/"
                   aria-label="Sign in"
                   title="Sign in"
                   className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
@@ -70,7 +69,6 @@ const Header = () => {
             <Link to="/signup">
               <li>
                 <a
-                  href="/"
                   className="inline-flex items-center justify-center font-bold h-12 px-6  tracking-wide text-white transition duration-200 rounded shadow-md bg-[#f9a826] hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                   aria-label="Sign up"
                   title="Sign up"
@@ -82,7 +80,6 @@ const Header = () => {
             <Link to="/admin">
               <li>
                 <a
-                  href="/"
                   className="inline-flex items-center justify-center font-bold h-12 px-6  tracking-wide text-white transition duration-200 rounded shadow-md bg-[#f9a826] hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                   aria-label="Sign up"
                   title="Sign up"
@@ -92,7 +89,7 @@ const Header = () => {
               </li>
             </Link>
           </ul>
-          <div className="lg:hidden">
+          <div className="lg:hidden z-50">
             <button
               aria-label="Open Menu"
               title="Open Menu"
@@ -102,7 +99,7 @@ const Header = () => {
               <HiMenuAlt1 size={30} />
             </button>
             {isMenuOpen && (
-              <div className="absolute top-0 left-0 w-full">
+              <div className="absolute top-0 left-0 w-full ">
                 <div className="p-5 bg-white border rounded shadow-sm">
                   <div className="flex items-center justify-between mb-4">
                     <div>
@@ -149,68 +146,65 @@ const Header = () => {
                     </div>
                   </div>
                   <nav>
-                    <ul className="space-y-4">
-                      <li>
-                        <a
-                          href="/"
-                          aria-label="Our product"
-                          title="Our product"
-                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                        >
-                          Product
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="/"
-                          aria-label="Our product"
-                          title="Our product"
-                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                        >
-                          Features
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="/"
-                          aria-label="Product pricing"
-                          title="Product pricing"
-                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                        >
-                          Pricing
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="/"
-                          aria-label="About us"
-                          title="About us"
-                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
-                        >
-                          About us
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="/"
-                          aria-label="Sign in"
-                          title="Sign in"
-                          className=" inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-black font-bold transition duration-200 rounded shadow-md  hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none  bg-gray-100 hover:bg-gray-200"
-                        >
-                          Sign in
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="/"
-                          className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md  hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none  bg-[#f9a826]"
-                          aria-label="Sign up"
-                          title="Sign up"
-                        >
-                          Sign up
-                        </a>
-                      </li>
+                    <ul>
+                      <Link to="/product">
+                        <li>
+                          <a
+                            aria-label="Our product"
+                            title="Our product"
+                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          >
+                            Product
+                          </a>
+                        </li>
+                      </Link>
+                      <Link to="/store">
+                        <li>
+                          <a
+                            aria-label="Our product"
+                            title="Our product"
+                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          >
+                            Store
+                          </a>
+                        </li>
+                      </Link>
                     </ul>
+                    <div className="space-y-4 mt-5">
+                      <div>
+                        <Link to="/login">
+                          <a
+                            aria-label="Sign in"
+                            title="Sign in"
+                            className=" inline-flex items-center justify-center w-full h-12 px-6  tracking-wide text-black font-bold transition duration-200 rounded shadow-md  hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none  bg-gray-100 hover:bg-gray-200"
+                          >
+                            Sign in
+                          </a>
+                        </Link>
+                      </div>
+                      <div>
+                        <Link to="/signup">
+                          <a
+                            className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md  hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none  bg-[#f9a826]"
+                            aria-label="Sign up"
+                            title="Sign up"
+                          >
+                            Sign up
+                          </a>
+                        </Link>
+                      </div>
+                      <div>
+                        <Link to="/admin">
+                          <a
+                            className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md  hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none  bg-[#f9a826]"
+                            aria-label="Sign up"
+                            title="Sign up"
+                          >
+                            Admin
+                          </a>
+                        </Link>
+                      </div>
+                    </div>
                   </nav>
                 </div>
               </div>

@@ -1,12 +1,12 @@
 import React, { useRef, useState } from "react";
 import Footer from "../Footer";
 import Header from "../Header";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc , getData } from "firebase/firestore";
 import { db } from "../../Firebase/config";
 
 const Admin = () => {
-  // const database = collection(db, "AdminData");
-  // const dataBaseRef = collection(db, "AdminData");
+  const database = collection(db, "AdminData");
+
   const [data, setData] = useState({});
   const handleChange = (e) => {
     const newData = { [e.target.name]: e.target.value };
@@ -18,13 +18,15 @@ const Admin = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    try {
-      const docRef = addDoc(collection(db, "AdminData"), data);
-      alert("Document written with ID: ", docRef.id);
-    } catch (e) {
-      alert(e.message);
-      console.error("Error adding document: ", e);
-    }
+    const docRef = addDoc(database, data)
+      .then(() => {
+        alert("Document written with ID");
+        console.log(docRef);
+        e.target.value = "";
+      })
+      .catch((e) => {
+        alert(e.message);
+      });
 
     // const file = imgRef.current.files[0];
     // const storageRef = collection(db, "AdminData")

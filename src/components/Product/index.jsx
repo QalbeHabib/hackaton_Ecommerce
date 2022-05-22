@@ -1,8 +1,10 @@
 import React from "react";
 import Header from "../Header";
 import Footer from "../Footer";
+import Images from "../../Assets/Images";
 
 const Product = () => {
+
   return (
     <div>
       <Header />
