@@ -79,6 +79,18 @@ const Header = () => {
                 </a>
               </li>
             </Link>
+            <Link to="/admin">
+              <li>
+                <a
+                  href="/"
+                  className="inline-flex items-center justify-center font-bold h-12 px-6  tracking-wide text-white transition duration-200 rounded shadow-md bg-[#f9a826] hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                  aria-label="Sign up"
+                  title="Sign up"
+                >
+                  Admin
+                </a>
+              </li>
+            </Link>
           </ul>
           <div className="lg:hidden">
             <button
