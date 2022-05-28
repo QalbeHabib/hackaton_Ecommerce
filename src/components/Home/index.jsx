@@ -106,7 +106,7 @@ const Home = () => {
                     <h2 className="title-font font-medium text-3xl text-white">
                       2.7K
                     </h2>
-                    <p className="leading-relaxed">Downloads</p>
+                    <p className="leading-relaxed">Products</p>
                   </div>
                 </div>
                 <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
@@ -122,9 +122,9 @@ const Home = () => {
                   <div className="border-2 border-[#f9a826] px-4 py-6 rounded-lg flex flex-col  justify-center items-center space-y-3">
                     <IoFastFoodSharp size={40} className="text-[#f9a826]" />
                     <h2 className="title-font font-medium text-3xl text-white">
-                      74
+                      1000
                     </h2>
-                    <p className="leading-relaxed">Files</p>
+                    <p className="leading-relaxed">Positive rating</p>
                   </div>
                 </div>
                 <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
@@ -133,7 +133,7 @@ const Home = () => {
                     <h2 className="title-font font-medium text-3xl text-white">
                       46
                     </h2>
-                    <p className="leading-relaxed">Places</p>
+                    <p className="leading-relaxed">brands</p>
                   </div>
                 </div>
               </div>
