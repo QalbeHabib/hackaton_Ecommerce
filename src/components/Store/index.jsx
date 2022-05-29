@@ -2,43 +2,33 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Images from "../../Assets/Images";
 import Header from "../Header/";
-import { collection, getDocs } from "firebase/firestore"; 
+import { addDoc, collection, getDocs } from "firebase/firestore";
 import { db } from "../../Firebase/config";
-
 
 //  get data from firebase firestore
 
-
-
-
 // setFireData(data);
 
-
-
-
-
+const c = console.log;
 
 const Store = () => {
-  const [fireData , setFireData] = useState([]);
+  const [fireData, setFireData] = useState([]);
+
+  const [cartId, setCartId] = useState([]);
+  const cartCollection = collection(db, "CartData");
 
   useEffect(() => {
-  const dataRef = collection(db, "AdminData")
+    const dataRef = collection(db, "AdminData");
     const habib = getDocs(dataRef).then((resp) => {
       setFireData(
         resp.docs.map((item) => {
-          return {...item.data()}
+          return { ...item.data(), id: item.id };
         })
-
       );
-     
-    })
-    
-    console.log(habib)
-  
-  
-  
-}, [])
-console.log(fireData)
+    });
+
+    // console.log(habib);
+  }, []);
 
   const storeData = [
     {
@@ -151,6 +141,24 @@ console.log(fireData)
     },
   ];
 
+  // console.log(fireData);
+  const handleCart = (item) => {
+    console.log("start");
+    addDoc(cartCollection, {
+      productId: item.id,
+      price: item.price,
+      title: item.title,
+      img: item.image,
+    })
+      .then(() => {
+        alert("product added into cart");
+      })
+      .catch((error) => {
+        alert("something went wronge!");
+      });
+    console.log("ended");
+  };
+
   return (
     <div>
       <Header />
@@ -210,6 +218,7 @@ console.log(fireData)
                         alt="Plan"
                       />
                     </div>
+                    <hr />
                     <div className="flex flex-col justify-between flex-grow p-8 border border-t-0 rounded-b">
                       <div>
                         <div className="text-lg font-semibold">
@@ -220,14 +229,12 @@ console.log(fireData)
                           ${item.price}
                         </div>
                       </div>
-                      <Link to='/product'>
                       <a
-                        href="/"
-                        className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide bg-[#f9a826] transition duration-200 rounded shadow-md text-black  focus:shadow-outline focus:outline-none hover:scale-105"
-                        >
-                        View Product
+                        className="inline-flex items-center justify-center cursor-pointer w-full h-12 px-6 font-medium tracking-wide bg-[#f9a826] transition duration-200 rounded shadow-md text-black  focus:shadow-outline focus:outline-none hover:scale-105"
+                        onClick={() => handleCart(item)}
+                      >
+                        Add to Cart
                       </a>
-                        </Link>
                     </div>
                   </div>
                 );

@@ -35,7 +35,7 @@ const Header = () => {
                     title="Our product"
                     className={`${navListColor}`}
                   >
-                    Product
+                    Cart
                   </a>
                 </li>
               </Link>
@@ -154,7 +154,7 @@ const Header = () => {
                             title="Our product"
                             className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                           >
-                            Product
+                            Cart
                           </a>
                         </li>
                       </Link>
